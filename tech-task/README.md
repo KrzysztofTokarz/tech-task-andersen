@@ -9,10 +9,11 @@ Application is made with Angular 15 using newest features like standalone compon
 
 Image carousel is made with ng-bootstrap, same for resposivity. 
 
-
 There are unit tests created in components which i found myself worth testing, as most of the code is not too complex.
 
 I didn`t use BEM because in my opinion it is not necessary in angular as we have styles encapsulation here.
+
+Added text shadow to images captions, because on some images with white background this text was barely visible.
 
 ## Things that could be improved given more time
 - Overall testing improvements:
