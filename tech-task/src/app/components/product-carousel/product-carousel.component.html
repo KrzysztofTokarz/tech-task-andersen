@@ -1,4 +1,4 @@
-<ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+<ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" [pauseOnFocus]="false" [pauseOnHover]="false">
   <ng-template ngbSlide *ngFor="let product of products">
     <!-- style instead of ngStyle for background because it looks like template literal in js, while in ngStyle we would have to use concatenation -->
     <div class="image" (click)="handleShowProductDialog(product)" style="background-image: url('{{ product.image }}')">
