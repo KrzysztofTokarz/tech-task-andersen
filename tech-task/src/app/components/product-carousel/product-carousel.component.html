@@ -1,0 +1,7 @@
+<ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+  <ng-template ngbSlide *ngFor="let product of products">
+    <div class="image" (click)="handleShowProductDialog(product)" style="background-image: url('{{ product.image }}')">
+      <p class="title">{{ product.title }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

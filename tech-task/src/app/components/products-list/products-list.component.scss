@@ -1,0 +1,10 @@
+@import "../../../styles/variables.scss";
+
+.sole-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  .sole-logo {
+    width: 65px;
+  }
+}

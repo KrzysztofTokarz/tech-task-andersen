@@ -1,0 +1,35 @@
+@import "../../../styles/variables.scss";
+
+:host::ng-deep {
+  ngb-carousel,
+  .carousel-inner,
+  .carousel-item,
+  .image {
+    height: 100%;
+  }
+}
+
+.image {
+  flex-grow: 1;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  @media (min-width: 500px) and (max-width: $sizeMd) {
+    height: 300px;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .title {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    text-shadow: 1px 1px 0px #000;
+  }
+}

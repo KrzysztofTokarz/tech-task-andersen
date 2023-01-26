@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Product details</h1>
+<div mat-dialog-content>
+  <app-product-dialog-item [title]="'Title'" [value]="data.product.title"></app-product-dialog-item>
+  <app-product-dialog-item [title]="'Price'" [value]="data.product.price"></app-product-dialog-item>
+  <app-product-dialog-item [title]="'Discount price'" [value]="data.product.discountPrice"></app-product-dialog-item>
+  <app-product-dialog-item [title]="'Currency'" [value]="data.product.currency"></app-product-dialog-item>
+  <app-product-dialog-item [title]="'Brand'" [value]="data.product.brand"></app-product-dialog-item>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-button (click)="onClose()">Close</button>
+  <!-- target blank to make user stay on our page -->
+  <a [href]="data.product.url" target="_blank">
+    <button mat-raised-button cdkFocusInitial color="primary">Go to product</button>
+  </a>
+</div>

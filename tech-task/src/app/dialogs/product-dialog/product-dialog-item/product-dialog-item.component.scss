@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+}
+
+.title {
+  font-weight: bold;
+  width: 120px;
+  flex-shrink: 0;
+}

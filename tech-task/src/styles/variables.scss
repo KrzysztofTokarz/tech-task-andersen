@@ -1,0 +1,15 @@
+// I wanted to use sass maps here like this one, but i found usage too overcomplicated ("map-get($breakpoints, "sm")")
+// $breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px,
+// );
+$sizeXs: 0;
+$sizeSm: 576px;
+$sizeMd: 768px;
+$sizeLg: 992px;
+$sizeXl: 1200px;
+$sizeXxl: 1400px;
