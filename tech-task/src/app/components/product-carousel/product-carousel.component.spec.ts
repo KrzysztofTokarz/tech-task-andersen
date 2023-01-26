@@ -1,4 +1,6 @@
+import { importProvidersFrom } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ProductCarouselComponent } from './product-carousel.component';
 
@@ -8,7 +10,8 @@ describe('ProductCarouselComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ ProductCarouselComponent ]
+      imports: [ ProductCarouselComponent ],
+      providers: [importProvidersFrom(MatDialogModule)],
     })
     .compileComponents();
 

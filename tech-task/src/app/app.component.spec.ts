@@ -1,12 +1,20 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppComponent } from './app.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
+      imports: [
+        AppComponent,
+        ProductsListComponent,
+        CommonModule
       ],
+      providers: [importProvidersFrom(HttpClientModule)],
     }).compileComponents();
   });
 
@@ -14,18 +22,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'tech-task'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('tech-task');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('tech-task app is running!');
   });
 });
