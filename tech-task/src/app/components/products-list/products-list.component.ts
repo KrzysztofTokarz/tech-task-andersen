@@ -15,10 +15,10 @@ import { ProductCarouselComponent } from "../product-carousel/product-carousel.c
     imports: [CommonModule, NgbCarouselModule, ProductCarouselComponent]
 })
 export class ProductsListComponent {
-  private readonly displayedItemsCount = 8;
+  readonly displayedItemsCount = 8;
 
   products$: Observable<Product[][]> = this.productsService.getProducts().pipe(
-    map((products) => {   
+    map((products) => {  
       const next = ArrayUtils.createArrayIterator(products, this.displayedItemsCount);
       const slideOneItems = next();
       const slideTwoItems = next();
@@ -32,5 +32,5 @@ export class ProductsListComponent {
     })
   );
 
-  constructor(private productsService: ProductsService) {}
+  constructor(public productsService: ProductsService) {}
 }
